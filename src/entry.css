@@ -9,5 +9,5 @@
 @import 'helpers/fonts.css';
 @import 'helpers/core.css';
 
-/* Containers */
-@import 'containers/app';
+/* Components */
+@import 'components/app';

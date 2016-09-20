@@ -8,7 +8,7 @@
     "copy-html": "cp src/index.html build/",
     "copy-assets": "cp -r src/assets build/",
     "compile": "npm run js && npm run css && npm run copy-html && npm run copy-assets",
-    "start": "webpack-dev-server --content-base build/ --history-api-fallback --host 0.0.0.0 --port 4000"
+    "start": "webpack-dev-server --content-base build/ --history-api-fallback --host 0.0.0.0 --port 8080"
   },
   "license": "",
   "dependencies": {

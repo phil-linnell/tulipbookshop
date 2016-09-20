@@ -10,7 +10,7 @@ export default class App extends Component {
     return (
       <div className="app">
 
-        <h1>Tulip Bookshop</h1>
+        <h1><img src="/assets/images/logo-tulip.png" alt="" />Tulip Bookshop</h1>
 
       </div>
     );
