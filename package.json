@@ -1,0 +1,33 @@
+{
+  "name": "tulipbookshop",
+  "version": "0.1.0",
+  "description": "Front End to Tulip Bookshop",
+  "scripts": {
+    "js": "webpack",
+    "css": "postcss -c postcss.config.js --local-plugins",
+    "copy-html": "cp src/index.html build/",
+    "copy-assets": "cp -r src/assets build/",
+    "compile": "npm run js && npm run css && npm run copy-html && npm run copy-assets",
+    "start": "webpack-dev-server --content-base build/ --history-api-fallback --host 0.0.0.0 --port 4000"
+  },
+  "license": "",
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.9.1",
+    "babel-loader": "6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "classnames": "^2.2.5",
+    "lodash": "^4.13.1",
+    "postcss": "^5.0.21",
+    "postcss-cli": "^2.5.2",
+    "postcss-custom-properties": "^5.0.1",
+    "postcss-import": "^8.1.2",
+    "postcss-nested": "^1.0.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
