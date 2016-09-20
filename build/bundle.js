@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "da4629221d51e27dd757"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a531fff9ed35f23e0e02"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22453,7 +22453,18 @@
 	        _react2.default.createElement(
 	          "h1",
 	          null,
+	          _react2.default.createElement("img", { src: "/assets/images/logo-tulip.png", alt: "" }),
 	          "Tulip Bookshop"
+	        ),
+	        _react2.default.createElement(
+	          "p",
+	          null,
+	          "Coming soon"
+	        ),
+	        _react2.default.createElement(
+	          "p",
+	          null,
+	          "tulipbookbox@gmail.com"
 	        )
 	      );
 	    }

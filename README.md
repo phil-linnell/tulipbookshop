@@ -21,12 +21,14 @@ $ npm run css
 
 ## Deploy
 
-Coming soon
+SSH into the server if you have the secret, then compile in the site directory
+```
+$ ssh root@tulipbookshop.com
+$ cd /www/tulipbookshop && npm run compile
+```
 
 ## TODO
 
 * Hot reload css ?
-* Set up NGINX
-* Deploy to DigitalOcean
 * Setup firebase
 * Form to capture email

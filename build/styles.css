@@ -369,14 +369,10 @@ button {
   background: none;
 }
 /* App foundations */
-@font-face {
+/*@font-face {
   font-family: 'RobotoRegular';
   src: url('/assets/fonts/Roboto-Regular.ttf')  format('truetype');
-}
-@font-face {
-  font-family: 'RobotoMedium';
-  src: url('/assets/fonts/Roboto-Medium.ttf')  format('truetype');
-}
+}*/
 body {
   background-color: #eee;
   color: #4a4a4a;
@@ -388,7 +384,7 @@ h1 {
   font-size: 24px;
   font-weight: 900;
 }
-/* Containers */
+/* Components */
 .app {
   padding: 0 30px;
 }
