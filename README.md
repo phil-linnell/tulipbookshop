@@ -24,7 +24,7 @@ $ npm run css
 SSH into the server if you have the secret, then compile in the site directory
 ```
 $ ssh root@tulipbookshop.com
-$ cd /www/tulipbookshop && npm run compile
+$ cd /www/tulipbookshop && git pull origin master
 ```
 
 ## TODO
