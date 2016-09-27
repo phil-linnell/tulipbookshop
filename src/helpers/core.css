@@ -1,12 +1,14 @@
 body {
   background-color: var(--base);
   color: var(--offBlack);
-  font-size: 14px;
-  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 h1 {
-  font-size: 24px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 42px;
   font-weight: 900;
+  text-transform: uppercase;
 }

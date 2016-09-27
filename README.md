@@ -26,6 +26,10 @@ SSH into the server if you have the secret, then compile in the site directory
 $ ssh root@tulipbookshop.com
 $ cd /www/tulipbookshop && git pull origin master
 ```
+Any issues:
+```
+$ service nginx restart
+```
 
 ## TODO
 

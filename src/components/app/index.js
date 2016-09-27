@@ -1,10 +1,10 @@
+"use strict";
+
 import React, { Component } from 'react';
 
-export default class App extends Component {
+import SignupContainer from '../../containers/signup';
 
-  constructor(props) {
-    super(props);
-  }
+export default class App extends Component {
 
   render() {
     return (
@@ -13,6 +13,8 @@ export default class App extends Component {
         <h1><img src="/assets/images/logo-tulip.png" alt="" />Tulip Bookshop</h1>
         <p>Coming soon</p>
         <p>tulipbookbox@gmail.com</p>
+
+        <SignupContainer />
 
       </div>
     );
