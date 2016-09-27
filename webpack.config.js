@@ -10,10 +10,22 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
-      exclude: /node_modules/,
-      loaders: ['react-hot', 'babel-loader']
-    },{test: /\.json$/, loader: "json"}]
+    preLoaders: [
+      {
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
+      }
+    ],
+    loaders: [
+      {
+        exclude: /node_modules/,
+        loaders: ['react-hot', 'babel-loader']
+      },{
+        test: /\.json$/,
+        loader: "json"
+      }
+    ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
@@ -23,6 +35,9 @@ module.exports = {
     hot: true,
     inline: true,
     port: 8080
+  },
+  eslint: {
+    configFile: './.eslintrc'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin({
