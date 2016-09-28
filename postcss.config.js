@@ -9,5 +9,7 @@ module.exports = {
 	output: "build/styles.css",
 	autoprefixer: {
 		browsers: ['last 5 versions']
-	}
+	},
+	"local-plugins": true,
+	"watch": true
 };

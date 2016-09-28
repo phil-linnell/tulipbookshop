@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const WebpackShellPlugin = require('webpack-shell-plugin');
 
 module.exports = {
   entry: [
@@ -9,6 +10,15 @@ module.exports = {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js'
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin({
+      multiStep: true
+    }),
+    new WebpackShellPlugin({
+      onBuildStart:['echo "Building..."'],
+      onBuildEnd:['echo "Success!" && npm run css']
+    })
+  ],
   module: {
     preLoaders: [
       {
@@ -34,14 +44,12 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     inline: true,
-    port: 8080
+    port: 8080,
+    contentBase: "build/",
+    host: "0.0.0.0",
+    noInfo: false
   },
   eslint: {
     configFile: './.eslintrc'
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin({
-      multiStep: true
-    })
-  ]
+  }
 };

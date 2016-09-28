@@ -4,11 +4,11 @@
   "description": "Front End to Tulip Bookshop",
   "scripts": {
     "js": "webpack",
-    "css": "postcss -c postcss.config.js --local-plugins",
+    "css": "postcss -c postcss.config.js",
     "copy-html": "cp src/index.html build/",
     "copy-assets": "cp -r src/assets build/",
     "compile": "npm run js && npm run css && npm run copy-html && npm run copy-assets",
-    "start": "webpack-dev-server --content-base build/ --history-api-fallback --host 0.0.0.0 --port 8080"
+    "start": "webpack-dev-server"
   },
   "license": "",
   "dependencies": {
@@ -37,6 +37,8 @@
   "devDependencies": {
     "eslint": "^3.6.1",
     "eslint-config-airbnb": "^12.0.0",
-    "eslint-loader": "^1.5.0"
+    "eslint-loader": "^1.5.0",
+    "webpack-hot-middleware": "^2.12.2",
+    "webpack-shell-plugin": "^0.4.3"
   }
 }
