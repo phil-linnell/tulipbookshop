@@ -3,12 +3,10 @@
   "version": "0.1.0",
   "description": "Front End to Tulip Bookshop",
   "scripts": {
-    "js": "webpack",
+    "js": "webpack --watch",
     "css": "postcss -c postcss.config.js",
-    "copy-html": "cp src/index.html build/",
-    "copy-assets": "cp -r src/assets build/",
-    "compile": "npm run js && npm run css && npm run copy-html && npm run copy-assets",
-    "start": "webpack-dev-server"
+    "copy-static": "cp src/index.html build/ && cp -r src/assets build/",
+    "compile": "npm run js && npm run css && npm run copy-static"
   },
   "license": "",
   "dependencies": {
@@ -19,7 +17,6 @@
     "babel-preset-react": "^6.5.0",
     "classnames": "^2.2.5",
     "firebase": "^3.4.0",
-    "firebase-3-react": "^1.0.24",
     "lodash": "^4.13.1",
     "postcss": "^5.0.21",
     "postcss-cli": "^2.5.2",
@@ -31,14 +28,11 @@
     "react-hot-loader": "^1.3.0",
     "react-mixin": "^3.0.5",
     "reactfire": "^1.0.0",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack": "^1.13.1"
   },
   "devDependencies": {
     "eslint": "^3.6.1",
     "eslint-config-airbnb": "^12.0.0",
-    "eslint-loader": "^1.5.0",
-    "webpack-hot-middleware": "^2.12.2",
-    "webpack-shell-plugin": "^0.4.3"
+    "eslint-loader": "^1.5.0"
   }
 }
