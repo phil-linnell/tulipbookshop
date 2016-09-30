@@ -1,10 +1,14 @@
-const webpack = require('webpack');
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/entry.js',
+  entry: [
+    'webpack-hot-middleware/client',
+    './src/entry.js'
+  ],
   output: {
     path: path.join(__dirname, 'build'),
+    publicPath: '/',
     filename: 'bundle.js'
   },
   module: {
@@ -23,9 +27,14 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.css']
   },
   eslint: {
     configFile: './.eslintrc'
-  }
+  },
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ]
 };

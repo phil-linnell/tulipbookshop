@@ -21463,7 +21463,7 @@
 	    _react2.default.createElement(
 	      'p',
 	      null,
-	      'Coming soon'
+	      'Coming soon!'
 	    ),
 	    _react2.default.createElement(
 	      'p',
