@@ -6,7 +6,8 @@
     "js": "webpack --watch",
     "css": "postcss -c postcss.config.js",
     "copy-static": "cp src/index.html build/ && cp -r src/assets build/",
-    "compile": "npm run js && npm run css && npm run copy-static"
+    "compile": "npm run js && npm run css && npm run copy-static",
+    "start": "webpack-dev-server"
   },
   "license": "",
   "dependencies": {

@@ -27,5 +27,19 @@ module.exports = {
   },
   eslint: {
     configFile: './.eslintrc'
-  }
+  },
+  devServer: {
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    port: 3000,
+    contentBase: "build/",
+    host: "0.0.0.0",
+    noInfo: false
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin({
+      multiStep: true
+    })
+  ]
 };
