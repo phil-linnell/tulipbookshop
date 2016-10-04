@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "71f1dff1d2e0e1e00cff"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b362d5a3f73575a0423c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22474,7 +22474,7 @@
 	        null,
 	        "Next:"
 	      ),
-	      " 18th December @ Abney Hall, Stoke Newington Church Street"
+	      " 9th October @ Abney Hall, 73a Stoke Newington Church Street"
 	    )
 	  );
 	}
@@ -22643,12 +22643,65 @@
 	    _react2.default.createElement(
 	      'p',
 	      null,
-	      'We are Tully and Philip and we love second-hand paperbacks particularly Penguin fiction and vintage Science-fiction. Lorem ipsum dolor sit amet.'
+	      'We (Tully and Philip) love reading and collecting second-hand books, particularly penguins, world literature and vintage sci-fi. Find us around London or follow ',
+	      _react2.default.createElement(
+	        'a',
+	        { href: '/' },
+	        'Tully on instagram'
+	      ),
+	      '.'
 	    ),
 	    _react2.default.createElement(
 	      'h2',
 	      { className: 'home__news-title' },
-	      'Personalised Gift / Subscription pack'
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'home__news-title__coming-soon' },
+	        'Coming soon!'
+	      ),
+	      'Our Tailored Book Package'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'home__subscription-info' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'home__subscription-info__form' },
+	        _react2.default.createElement(
+	          'i',
+	          null,
+	          'Tell us'
+	        ),
+	        ' about your reading habits, tastes and interests...'
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'home__subscription-info__hunt' },
+	        'Thinking caps on, we\'ll ',
+	        _react2.default.createElement(
+	          'i',
+	          null,
+	          'choose'
+	        ),
+	        ' and ',
+	        _react2.default.createElement(
+	          'i',
+	          null,
+	          'hunt'
+	        ),
+	        ' down an appropriate book...'
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'home__subscription-info__pack' },
+	        'Then deliver your ',
+	        _react2.default.createElement(
+	          'i',
+	          null,
+	          'personalised'
+	        ),
+	        ' book package (with extras).'
+	      )
 	    ),
 	    _react2.default.createElement(_signup2.default, null)
 	  );
@@ -22760,8 +22813,7 @@
 	              return;
 	            }
 	            _this2.setState({
-	              status: 'success',
-	              email: ''
+	              status: 'success'
 	            });
 	          });
 	        } else {
@@ -24219,35 +24271,35 @@
 	  return _react2.default.createElement(
 	    'div',
 	    { className: classes },
-	    _react2.default.createElement('input', {
-	      value: email,
-	      onChange: onEmailInput,
-	      type: 'text',
-	      placeholder: 'Type your email',
-	      className: 'signup__email-input'
-	    }),
 	    _react2.default.createElement(
-	      'button',
-	      {
-	        onClick: onSubmit,
-	        type: 'button',
-	        className: 'signup__submit-button'
-	      },
-	      'Submit'
+	      'form',
+	      { className: 'signup__form' },
+	      _react2.default.createElement('input', {
+	        value: email,
+	        onChange: onEmailInput,
+	        type: 'text',
+	        placeholder: 'Enter your email and we\'ll let you know when we launch!',
+	        className: 'signup__email-input'
+	      }),
+	      _react2.default.createElement(
+	        'button',
+	        {
+	          onClick: onSubmit,
+	          type: 'button',
+	          className: 'signup__submit-button'
+	        },
+	        status === 'sending' || status === 'success' ? _react2.default.createElement(_spinner2.default, null) : 'Submit'
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'signup__registered' },
+	        'Thanks for your interest! You\'ll be one of the first to know when we launch!'
+	      )
 	    ),
 	    _react2.default.createElement(
 	      'div',
-	      { className: 'signup__status-icon' },
-	      _react2.default.createElement(_spinner2.default, null)
-	    ),
-	    status === 'error' ? _react2.default.createElement(
-	      'div',
-	      { className: 'error-message' },
-	      errorMessage
-	    ) : _react2.default.createElement(
-	      'div',
-	      { className: 'submitted' },
-	      'Success!'
+	      { className: 'signup__error-message' },
+	      status === 'error' ? errorMessage : ''
 	    )
 	  );
 	}
