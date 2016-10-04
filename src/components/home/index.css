@@ -1,0 +1,66 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 710px;
+  padding: 50px 0 60px 0;
+}
+
+.home__heading {
+  font-size: 54px;
+  line-height: 1.1;
+  color: black;
+  font-weight: 900;
+}
+
+.home__news-title {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.home__news-title__coming-soon {
+  color: var(--color-brandSecondary);
+  margin-right: 15px;
+  font-size: 14px;
+  padding: 4px 10px;
+  border: 1px solid var(--color-brandSecondary);
+  border-radius: var(--border-radius);
+}
+
+.home__subscription-info {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    padding-top: 70px;
+    width: 30%;
+    background-repeat: no-repeat;
+    font-size: 14px;
+
+    i {
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
+
+.home__subscription-info__form {
+  background-image: url('assets/images/icn-form.png');
+  background-size: auto 50px;
+  background-position: 50% 5px;
+}
+
+.home__subscription-info__hunt {
+  background-image: url('assets/images/icn-hunt.png');
+  background-size: auto 65px;
+  background-position: 50% top;
+}
+
+.home__subscription-info__pack {
+  background-image: url('assets/images/icn-pack.png');
+  background-size: auto 35px;
+  background-position: 50% 15px;
+}

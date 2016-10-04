@@ -1,9 +1,9 @@
 :root {
-  --base-color: #fff;
-  --offWhite: #eee;
-  --offBlack: #222;
-  --lightGreyText: #aaa;
-  --borderColour: #dbdbdb;
-  --brandPrimary: #369a38;
-  --brandSecondary: #f93b5e;
+  --color-base: #fff;
+  --color-offWhite: #eee;
+  --color-offBlack: #333;
+  --color-brandPrimary: #369a38;
+  --color-brandSecondary: #f93b5e;
+
+  --border-radius: 3px;
 }

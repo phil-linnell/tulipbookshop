@@ -7,7 +7,6 @@ import Signup from '../../components/signup';
 
 class SignupContainer extends Component {
 
-
   constructor(props) {
     super(props);
 
@@ -45,27 +44,27 @@ class SignupContainer extends Component {
   handleClick() {
     this.setState({ status: 'sending' });
 
-    if (this.validateEmail(this.state.email)) {
-      this.firebaseRefs.signup.push(this.state.email, (error) => {
-        if (error) {
+    setTimeout(() => {
+      if (this.validateEmail(this.state.email)) {
+        this.firebaseRefs.signup.push(this.state.email, (error) => {
+          if (error) {
+            this.setState({
+              status: 'error',
+              errorMessage: error,
+            });
+            return;
+          }
           this.setState({
-            status: 'error',
-            errorMessage: error,
+            status: 'success',
           });
-          return;
-        }
-        this.setState({
-          status: 'success',
-          email: '',
         });
-        localStorage.setItem('submitted', true);
-      });
-    } else {
-      this.setState({
-        status: 'error',
-        errorMessage: 'Invalid email address',
-      });
-    }
+      } else {
+        this.setState({
+          status: 'error',
+          errorMessage: 'Invalid email address',
+        });
+      }
+    }, 1000);
   }
 
   handleInputChange(event) {

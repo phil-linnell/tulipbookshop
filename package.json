@@ -4,9 +4,9 @@
   "description": "Front End to Tulip Bookshop",
   "scripts": {
     "js": "webpack --watch",
-    "css": "postcss -c postcss.config.js",
+    "css": "postcss -c postcss.config.js --watch",
     "copy-static": "cp src/index.html build/ && cp -r src/assets build/",
-    "compile": "npm run js && npm run css && npm run copy-static",
+    "compile": "webpack && postcss -c postcss.config.js && npm run copy-static",
     "start": "webpack-dev-server"
   },
   "license": "",
