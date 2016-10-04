@@ -30,9 +30,3 @@ Any issues:
 ```
 $ service nginx restart
 ```
-
-## TODO
-
-* Hot reload css ?
-* Setup firebase
-* Form to capture email

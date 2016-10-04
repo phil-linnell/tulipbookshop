@@ -2,12 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100%;
   padding: 0 30px;
+  max-width: 750px;
+  margin: 0 auto;
+  /*background: url('/assets/images/stack.jpg') no-repeat 70% 10%;*/
+  background-size: auto 80%;
 }
 
 h1 {
   color: black;
-  margin: 40px 0;
+  margin: 0 0 40px 0;
   display: flex;
   align-items: center;
 

@@ -11,3 +11,5 @@
 
 /* Components */
 @import 'components/app';
+@import 'components/signup';
+@import 'components/spinner';

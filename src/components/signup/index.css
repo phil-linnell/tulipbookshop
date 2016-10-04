@@ -1,0 +1,60 @@
+.signup {
+  display: flex;
+  width: 100%;
+}
+
+.signup__email-input,
+.signup__submit-button {
+  border-radius: 3px;
+  padding: 20px 30px;
+  font-size: 24px;
+}
+
+.signup__email-input {
+  border: 1px solid #ddd;
+  flex: 1;
+
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+.signup__submit-button {
+  width: 140px;
+  background: var(--brandPrimary);
+  margin-left: 20px;
+  border: 1px transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.signup__status-icon {
+  opacity: 0;
+  transition: opacity .32s ease-in-out;
+}
+
+
+/* Status */
+
+.signup--status-ready {
+
+}
+
+.signup--status-sending {
+  .signup__status-icon {
+    opacity: 1;
+  }
+}
+
+.signup--status-error {
+
+}
+
+.signup--status-success {
+  .signup__email-input,
+  .signup__submit-button {
+    opacity: 0;
+    transition: opacity .32s ease-in-out;
+  }
+}

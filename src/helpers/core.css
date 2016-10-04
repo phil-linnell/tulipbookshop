@@ -1,5 +1,10 @@
+html, body,
+.wrapper {
+  height: 100%;
+}
+
 body {
-  background-color: var(--base);
+  background-color: var(--base-color);
   color: var(--offBlack);
   font-size: 18px;
   font-family: 'Lato', sans-serif;
