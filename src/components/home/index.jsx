@@ -10,12 +10,12 @@ function Home() {
       <p>
         We (Tully and Philip) love reading and collecting second-hand books,
         particularly penguins, world literature and vintage sci-fi. Find us
-        around London or follow <a href="/">Tully on instagram</a>.
+        around London or follow <a href="https://www.instagram.com/tulipbooks/">Tully on instagram</a>.
       </p>
 
       <h2 className="home__news-title">
+        <div className="home__news-title__heading">Our Tailored Book Package</div>
         <div className="home__news-title__coming-soon">Coming soon!</div>
-        Our Tailored Book Package
       </h2>
 
       <div className="home__subscription-info">
@@ -23,7 +23,7 @@ function Home() {
           <i>Tell us</i> about your reading habits, tastes and interests...
         </div>
         <div className="home__subscription-info__hunt">
-          Thinking caps on, we&apos;ll <i>choose</i> and <i>hunt</i> down an appropriate book...
+          We&apos;ll ponder and research to find your book <i>&apos;match&apos;</i>
         </div>
         <div className="home__subscription-info__pack">
           Then deliver your <i>personalised</i> book package (with extras).

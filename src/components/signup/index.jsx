@@ -8,13 +8,15 @@ function Signup({ email, onEmailInput, onSubmit, status, errorMessage }) {
     <div className={classes}>
 
       <form className="signup__form">
+
         <input
           value={email}
           onChange={onEmailInput}
           type="text"
-          placeholder="Enter your email and we&apos;ll let you know when we launch!"
+          placeholder="Type your email here and we&apos;ll let you know when we launch!"
           className="signup__email-input"
         />
+
         <button
           onClick={onSubmit}
           type="button"

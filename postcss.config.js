@@ -3,7 +3,8 @@ module.exports = {
 		"postcss-import",
 		"autoprefixer",
 		"postcss-nested",
-    "postcss-custom-properties"
+    "postcss-custom-properties",
+		"postcss-custom-media"
 	],
 	input: "src/entry.css",
 	output: "build/styles.css",

@@ -1,15 +1,21 @@
 html, body,
 .wrapper {
-  height: 100%;
+  @media (--breakpoint-medium) {
+    height: 100%;
+  }
 }
 
 body {
   background-color: var(--color-base);
   color: var(--color-offBlack);
-  font-size: 18px;
+  font-size: 14px;
   font-family: 'Lato', sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+
+  @media (--breakpoint-medium) {
+    font-size: 18px;
+  }
 }
 
 h1 {

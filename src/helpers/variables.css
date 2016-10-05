@@ -4,6 +4,13 @@
   --color-offBlack: #333;
   --color-brandPrimary: #369a38;
   --color-brandSecondary: #f93b5e;
-
   --border-radius: 3px;
+
+  --spacing-small: 20px;
+  --spacing-large: 40px
 }
+
+@custom-media --breakpoint-small (min-width: 480px); /* Just tweaks for slightly bigger mobile screens */
+@custom-media --breakpoint-medium (min-width: 768px); /* iPad/Tablet portrait and above */
+@custom-media --breakpoint-large (min-width: 1024px); /* iPad/Tablet landscape and above */
+@custom-media --breakpoint-desktop (min-width: 1280px); /* If there is loads of space */
