@@ -433,20 +433,31 @@ a:hover:after {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 5%;
+  padding: 0 5% 80px 5%;
   border-top: 10px solid #f93b5e;
+  background: url('assets/images/stack2.jpg') no-repeat left bottom;
+  background-size: 100% auto;
+}
+@media (min-width: 480px) {
+  .app {
+    padding-bottom: 60px;
+    background-position: left 0 bottom -120px;
+  }
 }
 @media (min-width: 768px) {
   .app {
     border-top: none;
     border-left: 24px solid #f93b5e;
     height: 100%;
+    padding-bottom: 0;
+    background-position: left 0 bottom -190px;
   }
 }
 @media (min-width: 1024px) {
   .app {
     background: url('assets/images/stack.jpg') no-repeat right 0;
     background-size: auto 100%;
+    padding-bottom: 0;
   }
 }
 .app__content {
