@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b362d5a3f73575a0423c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6ebf93e2f6b45e2aaed6"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22646,7 +22646,7 @@
 	      'We (Tully and Philip) love reading and collecting second-hand books, particularly penguins, world literature and vintage sci-fi. Find us around London or follow ',
 	      _react2.default.createElement(
 	        'a',
-	        { href: '/' },
+	        { href: 'https://www.instagram.com/tulipbooks/' },
 	        'Tully on instagram'
 	      ),
 	      '.'
@@ -22656,10 +22656,14 @@
 	      { className: 'home__news-title' },
 	      _react2.default.createElement(
 	        'div',
+	        { className: 'home__news-title__heading' },
+	        'Our Tailored Book Package'
+	      ),
+	      _react2.default.createElement(
+	        'div',
 	        { className: 'home__news-title__coming-soon' },
 	        'Coming soon!'
-	      ),
-	      'Our Tailored Book Package'
+	      )
 	    ),
 	    _react2.default.createElement(
 	      'div',
@@ -22677,19 +22681,12 @@
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'home__subscription-info__hunt' },
-	        'Thinking caps on, we\'ll ',
+	        'We\'ll ponder and research to find your book ',
 	        _react2.default.createElement(
 	          'i',
 	          null,
-	          'choose'
-	        ),
-	        ' and ',
-	        _react2.default.createElement(
-	          'i',
-	          null,
-	          'hunt'
-	        ),
-	        ' down an appropriate book...'
+	          '\'match\''
+	        )
 	      ),
 	      _react2.default.createElement(
 	        'div',
@@ -24278,7 +24275,7 @@
 	        value: email,
 	        onChange: onEmailInput,
 	        type: 'text',
-	        placeholder: 'Enter your email and we\'ll let you know when we launch!',
+	        placeholder: 'Type your email here and we\'ll let you know when we launch!',
 	        className: 'signup__email-input'
 	      }),
 	      _react2.default.createElement(
