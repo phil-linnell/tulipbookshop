@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6ebf93e2f6b45e2aaed6"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c757ab1c43def5924091"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22472,9 +22472,14 @@
 	      _react2.default.createElement(
 	        "b",
 	        null,
-	        "Next:"
+	        "Next Stall:"
 	      ),
-	      " 9th October @ Abney Hall, 73a Stoke Newington Church Street"
+	      " ",
+	      _react2.default.createElement(
+	        "a",
+	        { href: "http://www.hackneyfleamarket.com/calendar/2016/10/8/hackney-flea-market" },
+	        "Hackney Flea Market @ Abney Hall on 9th October"
+	      )
 	    )
 	  );
 	}
@@ -22642,14 +22647,26 @@
 	    ),
 	    _react2.default.createElement(
 	      'p',
-	      null,
-	      'We (Tully and Philip) love reading and collecting second-hand books, particularly penguins, world literature and vintage sci-fi. Find us around London or follow ',
+	      { className: 'home__intro' },
+	      'We (Tully and Philip) love reading and collecting second-hand books, particularly penguins, world literature and vintage sci-fi. Find us at markets around London. ',
+	      _react2.default.createElement('br', null),
 	      _react2.default.createElement(
-	        'a',
-	        { href: 'https://www.instagram.com/tulipbooks/' },
-	        'Tully on instagram'
-	      ),
-	      '.'
+	        'div',
+	        { className: 'home__intro__layout-tweak' },
+	        'Say ',
+	        _react2.default.createElement(
+	          'a',
+	          { href: 'mailto:hello@tulipbookshop.com' },
+	          'hello@tulipbookshop.com'
+	        ),
+	        ', or follow us on instagram ',
+	        _react2.default.createElement(
+	          'a',
+	          { href: 'https://www.instagram.com/tulipbooks/' },
+	          '@tulipbooks'
+	        ),
+	        '.'
+	      )
 	    ),
 	    _react2.default.createElement(
 	      'h2',
@@ -22681,7 +22698,7 @@
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'home__subscription-info__hunt' },
-	        'We\'ll ponder and research to find your book ',
+	        'We\'ll have a good think and search for your book ',
 	        _react2.default.createElement(
 	          'i',
 	          null,
@@ -22819,7 +22836,7 @@
 	            errorMessage: 'Invalid email address'
 	          });
 	        }
-	      }, 1000);
+	      }, 750); /* Just add a bit of time to satiate my appetite for spinners! */
 	    }
 	  }, {
 	    key: 'handleInputChange',

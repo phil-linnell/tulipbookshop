@@ -37,6 +37,18 @@
   margin-top: var(--spacing-small);
   text-align: center;
 
+  a {
+    display: inline;
+    color: var(--color-offblack);
+
+    &:after {
+      display: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   @media (--breakpoint-medium) {
     margin-top: 0;
     margin-left: 50px;

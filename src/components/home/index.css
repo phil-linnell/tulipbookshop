@@ -37,6 +37,16 @@
   }
 }
 
+.home__intro__layout-tweak {
+  display: block;
+  margin-top: var(--spacing-small);
+
+  @media (--breakpoint-medium) {
+    display: inline;
+    margin-top: 0;
+  }
+}
+
 .home__news-title {
   color: black;
   font-size: 18px;

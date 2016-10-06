@@ -64,7 +64,7 @@ class SignupContainer extends Component {
           errorMessage: 'Invalid email address',
         });
       }
-    }, 1000);
+    }, 750); /* Just add a bit of time to satiate my appetite for spinners! */
   }
 
   handleInputChange(event) {

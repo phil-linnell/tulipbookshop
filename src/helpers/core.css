@@ -14,7 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
 
   @media (--breakpoint-medium) {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 

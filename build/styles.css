@@ -396,7 +396,7 @@ body {
 }
 @media (min-width: 768px) {
   body {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 h1 {
@@ -524,6 +524,16 @@ a:hover:after {
   margin-top: 20px;
   text-align: center;
 }
+.header__extra a {
+  display: inline;
+  color: var(--color-offblack);
+}
+.header__extra a:after {
+  display: none;
+}
+.header__extra a:hover {
+  text-decoration: underline;
+}
 @media (min-width: 768px) {
   .header__extra {
     margin-top: 0;
@@ -583,6 +593,16 @@ a:hover:after {
   .home__heading {
     font-size: 54px;
     margin-bottom: 0;
+  }
+}
+.home__intro__layout-tweak {
+  display: block;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .home__intro__layout-tweak {
+    display: inline;
+    margin-top: 0;
   }
 }
 .home__news-title {
@@ -820,6 +840,7 @@ a:hover:after {
 }
 .signup__registered {
   position: absolute;
+  top: 30px;
   z-index: 1;
   opacity: 0;
   transition: opacity .32s ease-in-out .32s;

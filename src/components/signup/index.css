@@ -89,6 +89,7 @@
 
 .signup__registered {
   position: absolute;
+  top: 30px;
   z-index: 1;
   opacity: 0;
   transition: opacity .32s ease-in-out .32s;
