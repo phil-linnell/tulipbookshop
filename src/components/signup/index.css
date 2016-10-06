@@ -4,9 +4,11 @@
 
 .signup__form {
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   @media (--breakpoint-medium) {
-    display: flex;
+    flex-direction: row;
     width: 100%;
   }
 }
@@ -21,14 +23,29 @@
   margin-left: 5px;
 }
 
+.signup__form__small-screen-fix {
+  order: 1;
+  position: relative;
+  padding: 9px 20px;
+  background-color: #f6f6f6;
+  border-radius: var(--border-radius);
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+
+  @media (--breakpoint-medium) {
+    display: none;
+  }
+}
+
 .signup__email-input,
 .signup__submit-button {
   position: relative;
   z-index: 2;
   border-radius: var(--border-radius);
-  padding: 10px 20px;
+  padding: 0 20px;
   font-size: 18px;
   width: 100%;
+  height: 44px;
   box-sizing: border-box;
 
   @media (--breakpoint-medium) {
@@ -37,45 +54,50 @@
 }
 
 .signup__email-input {
+  order: 2;
   border: 1px solid #ddd;
   transition: opacity .2s ease-in-out;
+  appearance: none;
+  text-align: center;
 
   &::placeholder {
-    font-size: 14px;
-    white-space: pre-wrap;
-    transform: translateY(-10px);
+    opacity: 0;
   }
 
   &:focus::placeholder {
     opacity: 0;
   }
 
-  @media (--breakpoint-small) {
-    &::placeholder {
-      transform: translateY(0);
-    }
-  }
-
   @media (--breakpoint-medium) {
     flex: 1;
+    text-align: left;
+
+    &::placeholder {
+      opacity: 1;
+      font-size: 14px;
+      color: var(--color-lightText);
+    }
   }
 }
 
 .signup__submit-button {
-  display: flex;
-  justify-content: center;
+  order: 3;
   background: var(--color-brandPrimary);
   margin-top: 10px;
   border: 1px transparent;
   color: white;
   text-transform: uppercase;
   font-size: 14px;
-  height: 44px;
+  text-align: center;
 
   @media (--breakpoint-medium) {
     width: 140px;
     margin-left: 20px;
     margin-top: 0;
+  }
+
+  .spinner {
+    margin: 0 auto;
   }
 }
 
@@ -89,19 +111,26 @@
 
 .signup__registered {
   position: absolute;
-  top: 30px;
+  top: 40px;
+  left: 0;
+  width: 100%;
   z-index: 1;
   opacity: 0;
   transition: opacity .32s ease-in-out .32s;
   font-weight: bold;
   color: var(--color-brandPrimary);
+
+  @media (--breakpoint-medium) {
+    top: 10px;
+  }
 }
 
 /* Status */
 
 .signup--status-success {
   .signup__email-input,
-  .signup__submit-button {
+  .signup__submit-button,
+  .signup__form__small-screen-fix {
     opacity: 0;
     transition: opacity .32s ease-in-out;
   }

@@ -6,9 +6,18 @@
   background: url('assets/images/stack2.jpg') no-repeat left bottom;
   background-size: 100% auto;
 
+
+  @media (min-width: 375px) {
+    padding-bottom: 120px;
+  }
+
   @media (--breakpoint-small) {
-    padding-bottom: 60px;
-    background-position: left 0 bottom -120px;
+    padding-bottom: 170px;
+    background-position: left bottom;
+  }
+
+  @media (min-width: 570px) {
+    padding-bottom: 220px;
   }
 
   @media (--breakpoint-medium) {

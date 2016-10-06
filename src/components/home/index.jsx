@@ -10,10 +10,10 @@ function Home() {
       <p className="home__intro">
         We (Tully and Philip) love reading and collecting second-hand books, particularly penguins,
         world literature and vintage sci-fi. Find us at markets around London. <br />
-        <div className="home__intro__layout-tweak">
-          Say <a href="mailto:hello@tulipbookshop.com">hello@tulipbookshop.com</a>, or follow us on
-          instagram <a href="https://www.instagram.com/tulipbooks/">@tulipbooks</a>.
-        </div>
+        <span className="home__intro__layout-tweak">
+          Say <a href="mailto:hello@tulipbookshop.com">hello@tulipbookshop.com</a> or follow
+          us on instagram <a href="https://www.instagram.com/tulipbooks/">@tulipbooks</a>.
+        </span>
       </p>
 
       <h2 className="home__news-title">

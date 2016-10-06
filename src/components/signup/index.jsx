@@ -17,6 +17,10 @@ function Signup({ email, onEmailInput, onSubmit, status, errorMessage }) {
           className="signup__email-input"
         />
 
+        <div className="signup__form__small-screen-fix">
+          Enter your email below and we&apos;ll let you know when we launch!
+        </div>
+
         <button
           onClick={onSubmit}
           type="button"
