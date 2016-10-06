@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c757ab1c43def5924091"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "38f4fe440ac325006893"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22651,7 +22651,7 @@
 	      'We (Tully and Philip) love reading and collecting second-hand books, particularly penguins, world literature and vintage sci-fi. Find us at markets around London. ',
 	      _react2.default.createElement('br', null),
 	      _react2.default.createElement(
-	        'div',
+	        'span',
 	        { className: 'home__intro__layout-tweak' },
 	        'Say ',
 	        _react2.default.createElement(
@@ -22659,7 +22659,7 @@
 	          { href: 'mailto:hello@tulipbookshop.com' },
 	          'hello@tulipbookshop.com'
 	        ),
-	        ', or follow us on instagram ',
+	        ' or follow us on instagram ',
 	        _react2.default.createElement(
 	          'a',
 	          { href: 'https://www.instagram.com/tulipbooks/' },
@@ -24295,6 +24295,11 @@
 	        placeholder: 'Type your email here and we\'ll let you know when we launch!',
 	        className: 'signup__email-input'
 	      }),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'signup__form__small-screen-fix' },
+	        'Enter your email below and we\'ll let you know when we launch!'
+	      ),
 	      _react2.default.createElement(
 	        'button',
 	        {
