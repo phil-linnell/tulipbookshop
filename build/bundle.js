@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "38f4fe440ac325006893"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "1a54953dcec471eba638"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22648,7 +22648,13 @@
 	    _react2.default.createElement(
 	      'p',
 	      { className: 'home__intro' },
-	      'We (Tully and Philip) love reading and collecting second-hand books, particularly penguins, world literature and vintage sci-fi. Find us at markets around London. ',
+	      'We (Tully and Philip) love reading and collecting second-hand books, particularly penguins, world literature and vintage sci-fi. Find us at markets around ',
+	      _react2.default.createElement(
+	        'b',
+	        null,
+	        'London'
+	      ),
+	      '. ',
 	      _react2.default.createElement('br', null),
 	      _react2.default.createElement(
 	        'span',
@@ -22674,7 +22680,7 @@
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'home__news-title__heading' },
-	        'Our Tailored Book Package'
+	        'Our Tailored Book Package personalised for you'
 	      ),
 	      _react2.default.createElement(
 	        'div',
@@ -22703,18 +22709,19 @@
 	          'i',
 	          null,
 	          '\'match\''
-	        )
+	        ),
+	        '...'
 	      ),
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'home__subscription-info__pack' },
-	        'Then deliver your ',
+	        'Then send your ',
 	        _react2.default.createElement(
 	          'i',
 	          null,
-	          'personalised'
+	          'unique'
 	        ),
-	        ' book package (with extras).'
+	        ' book package with bonus extras.'
 	      )
 	    ),
 	    _react2.default.createElement(_signup2.default, null)
