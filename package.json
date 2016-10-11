@@ -1,6 +1,6 @@
 {
   "name": "tulipbookshop",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Front End to Tulip Bookshop",
   "scripts": {
     "js": "webpack --watch",
@@ -35,6 +35,7 @@
   "devDependencies": {
     "eslint": "^3.7.0",
     "eslint-config-airbnb": "^12.0.0",
-    "eslint-loader": "^1.5.0"
+    "eslint-loader": "^1.5.0",
+    "stylelint": "^7.4.2"
   }
 }
