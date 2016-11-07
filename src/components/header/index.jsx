@@ -9,7 +9,7 @@ function Header() {
       </h1>
       <div className="header__extra">
         <b>Next Stall:</b> <a href="https://www.facebook.com/events/244629595952796/">
-        Christmas Market @ Gallery Cafe/St Margaret's House on 3rd December</a>
+        Christmas Market @ Gallery Cafe/St Margaret&apos;s House on 3rd December</a>
       </div>
 
     </header>

@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "57820cdb707b7ceb751b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7614aab79bbddbd26686"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22477,8 +22477,8 @@
 	      " ",
 	      _react2.default.createElement(
 	        "a",
-	        { href: "http://www.hackneyfleamarket.com/calendar/2016/10/30/the-old-dalston-market" },
-	        "The Old Dalston Market @ Epic Dalston on 30th October"
+	        { href: "https://www.facebook.com/events/244629595952796/" },
+	        "Christmas Market @ Gallery Cafe/St Margaret's House on 3rd December"
 	      )
 	    )
 	  );

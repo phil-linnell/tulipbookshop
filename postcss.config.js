@@ -4,8 +4,8 @@ module.exports = {
 		"autoprefixer",
 		"postcss-nested",
     "postcss-custom-properties",
-		"postcss-custom-media",
-		"stylelint"
+		"postcss-custom-media"
+		// "stylelint"
 	],
 	input: "src/entry.css",
 	output: "build/styles.css",
