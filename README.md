@@ -21,12 +21,10 @@ $ npm run css
 
 ## Deploy
 
-SSH into the server if you have the secret, then compile in the site directory
 ```
-$ ssh root@tulipbookshop.com
-$ cd /www/tulipbookshop && git pull origin master
+$ firebase init
+$ firebase login
 ```
-Any issues:
 ```
-$ service nginx restart
+$ firebase deploy
 ```

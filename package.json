@@ -5,7 +5,7 @@
   "scripts": {
     "js": "webpack --watch",
     "css": "postcss -c postcss.config.js --watch",
-    "copy-static": "cp src/index.html build/ && cp -r src/assets build/ && cp src/favicons/* build/",
+    "copy-static": "cp src/index.html public/ && cp -r src/assets public/ && cp src/favicons/* public/",
     "compile": "webpack && postcss -c postcss.config.js && npm run copy-static",
     "start": "webpack-dev-server"
   },

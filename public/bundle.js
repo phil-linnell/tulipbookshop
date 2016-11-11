@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7614aab79bbddbd26686"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "15c5ebeb7b6dd1a89e1f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22775,6 +22775,45 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	function validateEmail(email) {
+	  var re = /\S+@\S+\.\S+/;
+	  return re.test(email);
+	}
+
+	function handleInputChange(component) {
+	  return function (event) {
+	    component.setState({ email: event.target.value });
+	  };
+	}
+
+	function handleClick(component) {
+	  return function (event) {
+	    event.preventDefault();
+
+	    component.setState({ status: 'sending' });
+
+	    setTimeout(function () {
+	      if (validateEmail(component.state.email)) {
+	        component.firebaseRefs.signup.push(component.state.email, function (error) {
+	          if (error) {
+	            component.setState({
+	              status: 'error',
+	              errorMessage: error
+	            });
+	            return;
+	          }
+	          component.setState({ status: 'success' });
+	        });
+	      } else {
+	        component.setState({
+	          status: 'error',
+	          errorMessage: 'Invalid email address'
+	        });
+	      }
+	    }, 750); /* Just add a bit of time to satiate my appetite for spinners! */
+	  };
+	}
+
 	var SignupContainer = function (_Component) {
 	  _inherits(SignupContainer, _Component);
 
@@ -22788,10 +22827,6 @@
 	      status: 'ready',
 	      errorMessage: ''
 	    };
-
-	    _this.validateEmail = _this.validateEmail.bind(_this);
-	    _this.handleInputChange = _this.handleInputChange.bind(_this);
-	    _this.handleClick = _this.handleClick.bind(_this);
 	    return _this;
 	  }
 
@@ -22802,63 +22837,38 @@
 	        apiKey: 'AIzaSyB9XgiyKDaX9voc38gTxAAZJ2EzR4pWIEU',
 	        authDomain: 'tulipbookshop-2b750.firebaseapp.com',
 	        databaseURL: 'https://tulipbookshop-2b750.firebaseio.com',
-	        storageBucket: 'tulipbookshop-2b750.appspot.com'
+	        storageBucket: 'tulipbookshop-2b750.appspot.com',
+	        messagingSenderId: '900930616506'
 	      };
 
 	      _firebase2.default.initializeApp(config);
+
+	      _firebase2.default.auth().signInAnonymously().catch(function (error) {
+	        // Handle Errors here.
+	        var errorCode = error.code;
+	        var errorMessage = error.message;
+	        // ...
+	        console.log(errorCode, errorMessage);
+	      });
 
 	      var ref = _firebase2.default.database().ref('signup');
 	      this.bindAsArray(ref, 'signup');
 	    }
 	  }, {
-	    key: 'validateEmail',
-	    value: function validateEmail(email) {
-	      this.re = /\S+@\S+\.\S+/;
-	      return this.re.test(email);
-	    }
-	  }, {
-	    key: 'handleClick',
-	    value: function handleClick() {
-	      var _this2 = this;
-
-	      this.setState({ status: 'sending' });
-
-	      setTimeout(function () {
-	        if (_this2.validateEmail(_this2.state.email)) {
-	          _this2.firebaseRefs.signup.push(_this2.state.email, function (error) {
-	            if (error) {
-	              _this2.setState({
-	                status: 'error',
-	                errorMessage: error
-	              });
-	              return;
-	            }
-	            _this2.setState({
-	              status: 'success'
-	            });
-	          });
-	        } else {
-	          _this2.setState({
-	            status: 'error',
-	            errorMessage: 'Invalid email address'
-	          });
-	        }
-	      }, 750); /* Just add a bit of time to satiate my appetite for spinners! */
-	    }
-	  }, {
-	    key: 'handleInputChange',
-	    value: function handleInputChange(event) {
-	      this.setState({ email: event.target.value });
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _state = this.state;
+	      var email = _state.email;
+	      var status = _state.status;
+	      var errorMessage = _state.errorMessage;
+
+
 	      return _react2.default.createElement(_signup2.default, {
-	        email: this.state.email,
-	        onEmailInput: this.handleInputChange,
-	        onSubmit: this.handleClick,
-	        status: this.state.status,
-	        errorMessage: this.state.errorMessage
+	        onEmailInput: handleInputChange(this),
+	        onSubmit: handleClick(this),
+	        email: email,
+	        status: status,
+	        errorMessage: errorMessage
 	      });
 	    }
 	  }]);

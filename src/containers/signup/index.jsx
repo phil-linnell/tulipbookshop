@@ -5,6 +5,45 @@ import reactMixin from 'react-mixin';
 
 import Signup from '../../components/signup';
 
+function validateEmail(email) {
+  const re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
+
+function handleInputChange(component) {
+  return (event) => {
+    component.setState({ email: event.target.value });
+  };
+}
+
+function handleClick(component) {
+  return (event) => {
+    event.preventDefault();
+
+    component.setState({ status: 'sending' });
+
+    setTimeout(() => {
+      if (validateEmail(component.state.email)) {
+        component.firebaseRefs.signup.push(component.state.email, (error) => {
+          if (error) {
+            component.setState({
+              status: 'error',
+              errorMessage: error,
+            });
+            return;
+          }
+          component.setState({ status: 'success' });
+        });
+      } else {
+        component.setState({
+          status: 'error',
+          errorMessage: 'Invalid email address',
+        });
+      }
+    }, 750); /* Just add a bit of time to satiate my appetite for spinners! */
+  };
+}
+
 class SignupContainer extends Component {
 
   constructor(props) {
@@ -15,10 +54,6 @@ class SignupContainer extends Component {
       status: 'ready',
       errorMessage: '',
     };
-
-    this.validateEmail = this.validateEmail.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
   }
 
 
@@ -28,57 +63,33 @@ class SignupContainer extends Component {
       authDomain: 'tulipbookshop-2b750.firebaseapp.com',
       databaseURL: 'https://tulipbookshop-2b750.firebaseio.com',
       storageBucket: 'tulipbookshop-2b750.appspot.com',
+      messagingSenderId: '900930616506',
     };
 
     firebase.initializeApp(config);
+
+    firebase.auth().signInAnonymously().catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ...
+      console.log(errorCode, errorMessage);
+    });
 
     const ref = firebase.database().ref('signup');
     this.bindAsArray(ref, 'signup');
   }
 
-  validateEmail(email) {
-    this.re = /\S+@\S+\.\S+/;
-    return this.re.test(email);
-  }
-
-  handleClick() {
-    this.setState({ status: 'sending' });
-
-    setTimeout(() => {
-      if (this.validateEmail(this.state.email)) {
-        this.firebaseRefs.signup.push(this.state.email, (error) => {
-          if (error) {
-            this.setState({
-              status: 'error',
-              errorMessage: error,
-            });
-            return;
-          }
-          this.setState({
-            status: 'success',
-          });
-        });
-      } else {
-        this.setState({
-          status: 'error',
-          errorMessage: 'Invalid email address',
-        });
-      }
-    }, 750); /* Just add a bit of time to satiate my appetite for spinners! */
-  }
-
-  handleInputChange(event) {
-    this.setState({ email: event.target.value });
-  }
-
   render() {
+    const { email, status, errorMessage } = this.state;
+
     return (
       <Signup
-        email={this.state.email}
-        onEmailInput={this.handleInputChange}
-        onSubmit={this.handleClick}
-        status={this.state.status}
-        errorMessage={this.state.errorMessage}
+        onEmailInput={handleInputChange(this)}
+        onSubmit={handleClick(this)}
+        email={email}
+        status={status}
+        errorMessage={errorMessage}
       />
     );
   }

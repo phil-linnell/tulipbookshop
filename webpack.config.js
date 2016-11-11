@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   entry: './src/entry.js',
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
   },
   module: {
@@ -33,7 +33,7 @@ module.exports = {
     hot: true,
     inline: true,
     port: 3000,
-    contentBase: "build/",
+    contentBase: "public/",
     host: "0.0.0.0",
     noInfo: false
   },

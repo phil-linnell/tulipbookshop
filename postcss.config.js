@@ -8,7 +8,7 @@ module.exports = {
 		// "stylelint"
 	],
 	input: "src/entry.css",
-	output: "build/styles.css",
+	output: "public/styles.css",
 	autoprefixer: {
 		browsers: ['last 5 versions']
 	},
