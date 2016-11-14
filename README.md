@@ -21,10 +21,7 @@ $ npm run css
 
 ## Deploy
 
-```
-$ firebase init
-$ firebase login
-```
-```
-$ firebase deploy
-```
+Hosted at Netlify. Simply push to repo.
+
+(might be some legacy firebase hosting stuff)
+TODO: Move db to netlify
