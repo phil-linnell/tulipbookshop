@@ -1,5 +1,4 @@
-html, body,
-.wrapper {
+html, body, .wrapper {
   @media (--breakpoint-medium) {
     height: 100%;
   }

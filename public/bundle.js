@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "15c5ebeb7b6dd1a89e1f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "12e34147b8e1ea010921"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22472,7 +22472,7 @@
 	      _react2.default.createElement(
 	        "b",
 	        null,
-	        "Next Stall:"
+	        "Next Stall -"
 	      ),
 	      " ",
 	      _react2.default.createElement(
