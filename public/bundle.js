@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "12e34147b8e1ea010921"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b418da9a4dd6b06b2d11"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22472,13 +22472,13 @@
 	      _react2.default.createElement(
 	        "b",
 	        null,
-	        "Next Stall -"
+	        "Next Stall:"
 	      ),
 	      " ",
 	      _react2.default.createElement(
 	        "a",
-	        { href: "https://www.facebook.com/events/244629595952796/" },
-	        "Christmas Market @ Gallery Cafe/St Margaret's House on 3rd December"
+	        { href: "https://www.facebook.com/events/1638731976424757/" },
+	        "Abney Hall, 73A Stoke Newington Church Stree on 5th February"
 	      )
 	    )
 	  );

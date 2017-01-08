@@ -427,7 +427,7 @@ a:hover:after {
 /* Components */
 .app {
   display: flex;
-  /*flex-direction: column;*/
+  flex-direction: column;
   padding: 0 5% 80px 5%;
   border-top: 10px solid #f93b5e;
   background: url('assets/images/stack2.jpg') no-repeat left bottom;
@@ -470,7 +470,7 @@ a:hover:after {
   width: 100%; /* Fix: makes max-width work with margin auto inside flexbox */
   max-width: 920px;
   margin: 0 auto;
-  /*flex: 1;*/
+  flex: 1;
 }
 .header {
   width: 100%; /* Fix: makes max-width work with margin auto inside flexbox */
