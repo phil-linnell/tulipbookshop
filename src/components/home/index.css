@@ -25,14 +25,13 @@
   color: black;
   font-weight: 900;
   margin-bottom: var(--spacing-large);
-  margin-top: var(--spacing-small);
 
   @media (--breakpoint-small) {
     font-size: 42px;
   }
 
   @media (--breakpoint-medium) {
-    font-size: 54px;
+    font-size: 48px;
     margin-bottom: 0;
   }
 }

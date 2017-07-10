@@ -11,8 +11,7 @@ function Home() {
         We (Tully and Philip) love reading and collecting second-hand books, particularly penguins,
         world literature and vintage sci-fi. Find us at markets around <b>London</b>. <br />
         <span className="home__intro__layout-tweak">
-          Say <a href="mailto:hello@tulipbookshop.com">hello@tulipbookshop.com</a> or follow
-          us on instagram <a href="https://www.instagram.com/tulipbooks/">@tulipbooks</a>.
+          Send us a message on instagram <a href="https://www.instagram.com/tulipbooks/">@tulipbooks</a>!
         </span>
       </p>
 

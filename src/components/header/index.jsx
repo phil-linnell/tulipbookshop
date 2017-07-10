@@ -8,8 +8,7 @@ function Header() {
         <img src="/assets/images/logo-tulip.png" alt="" />Tulip Bookshop
       </h1>
       <div className="header__extra">
-        <b>Next Stall:</b> <a href="https://www.facebook.com/events/1638731976424757/">
-        Abney Hall, 73A Stoke Newington Church Stree on 5th February</a>
+        <b>Next Stall:</b> Back after the summer
       </div>
 
     </header>

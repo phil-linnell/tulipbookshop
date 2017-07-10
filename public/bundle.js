@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b418da9a4dd6b06b2d11"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0b5077fc1d240eecd53e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22474,12 +22474,7 @@
 	        null,
 	        "Next Stall:"
 	      ),
-	      " ",
-	      _react2.default.createElement(
-	        "a",
-	        { href: "https://www.facebook.com/events/1638731976424757/" },
-	        "Abney Hall, 73A Stoke Newington Church Stree on 5th February"
-	      )
+	      " Back after the summer"
 	    )
 	  );
 	}
@@ -22659,19 +22654,13 @@
 	      _react2.default.createElement(
 	        'span',
 	        { className: 'home__intro__layout-tweak' },
-	        'Say ',
-	        _react2.default.createElement(
-	          'a',
-	          { href: 'mailto:hello@tulipbookshop.com' },
-	          'hello@tulipbookshop.com'
-	        ),
-	        ' or follow us on instagram ',
+	        'Send us a message on instagram ',
 	        _react2.default.createElement(
 	          'a',
 	          { href: 'https://www.instagram.com/tulipbooks/' },
 	          '@tulipbooks'
 	        ),
-	        '.'
+	        '!'
 	      )
 	    ),
 	    _react2.default.createElement(
